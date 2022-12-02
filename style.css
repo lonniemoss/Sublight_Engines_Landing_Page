@@ -1,0 +1,695 @@
+* { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; box-sizing: border-box; z-index: 1;}
+.row{
+    position: relative;
+    display: flex;
+}
+.responsive{
+    width: 100%;
+    height: auto;
+}
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 68px;
+    left: 0px;
+    top: 24px;
+    background: rgba(0,0,0,0.69);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cie-logo{
+    position: relative;
+    top: 2px;
+    left: 20px;
+}
+.cie-logo img{
+    width: 100%;
+}
+.nav-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 200px; 
+}
+
+nav ul li {
+    list-style: none;
+}
+nav ul li a{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 2vh;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    background-color: #555;
+}
+.nav-options ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+@media(max-width:940px){
+    .hamburger{
+        position: fixed;
+        display: block;
+        right: 10%;
+        top: 7%;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-options{
+        position: fixed;
+        visibility: hidden;
+        left: -200%;
+        top: 16%;
+        gap: 0;
+        flex-direction: column;
+        background: rgba(0,0,0,0.69);
+        width: 100%;
+        text-align: center;
+        align-items: right;
+        transition: 0.3s;
+        z-index: 10;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-options.active{
+        left: 0;
+        top: 16%;
+        z-index: 10;
+        visibility: visible;
+    }
+    .nav-options a{
+        align-items: center;
+        text-align: center;
+        font-size: small;
+    }
+}
+
+.our-mission{
+    width: 100%;
+    height: 120vh;
+    background: url(images/bkg_1\ 1.png);
+    background-size: cover;
+    background-position: center;
+}
+#motto-1{
+    position: relative;
+    margin-top: 70vh;
+    font-weight: 700;
+    font-size: 250%;
+    color: #FFFFFF;
+}
+#motto-2{
+    position: relative;
+    font-weight: 800;
+    font-size: 60px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+/* We Do Section */
+#container-color{
+    background-color: #383838;
+}
+.container{
+    padding: 5%;
+    align-items: center;
+}
+.sub-title{
+    position: relative;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.section-title{
+    position: relative;
+    font-weight: 800;
+    font-size: 5vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+.separator{
+    justify-content: center;
+}
+.texts{
+    text-align: center;
+    padding-bottom: 3%;
+}
+.container .row{
+    position: relative;
+    display: flex;
+    top: 50px;
+}
+.designs{
+    width: 80%;
+}
+#design2{
+    width: 86%;
+}
+.column{
+    flex: 33.33%;
+    padding: 5%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+
+/* Security Section */
+.sec-text{
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#security-subtitle{
+    position: relative;
+    padding-top: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #292929;
+}
+#security-title{
+    position: relative;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: left;
+    color: #292929;
+}
+.description{
+    position: relative;
+    top: 5%;
+    font-size: 120%;
+    text-align: left;
+    color: #292929;
+}
+.sec-image{
+    padding: 3%;
+}
+
+/* Products section */
+.products{
+    background-color: #FF7630;
+    padding-top: 4%;
+    padding-bottom: 6%;
+    padding-left: 2%;
+}
+.text-container{
+    text-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 2%;
+}
+.text-container h1{
+  
+    font-size: large;
+}
+.text-container h2{
+    font-size: xx-large;
+}
+.text-container img{
+    padding: 1%;
+    align-items: center;
+}
+.products-images{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2%;
+    padding-top: 3%;
+}
+.img-text-box{
+    width: 18.6%;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.21);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.img-text-box img{
+    width: 100%;
+}
+.img-text-box h1{
+    font-size: medium;
+    padding-top: 4%;
+}
+.img-text-box p{
+    padding-bottom: 6%;
+    padding-top: 2%;
+    display: flex;
+    padding-inline: 20%;
+    
+}
+.dl {
+    text-align: center;
+    border-style: solid;
+    border-color: #fff;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Form Section */
+.text{
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 3%;
+}
+.text h1{
+    font-size: 120%;
+    font-weight: bold;
+}
+.text h2{
+    color: #FF7630;
+    font-size: 230%;
+    padding: 0%;
+}
+.text img{
+    padding: 3%;
+}
+
+/* INPUT side*/
+form{
+    text-align: center;
+    padding-inline: 17%;
+}
+.label{
+    font-size: 1rem;
+}
+
+.form-control i {
+    visibility: hidden;
+}
+.form-control small {
+    visibility: hidden;
+}
+.form-control.success input {
+    border-color: #2ecc71;
+}
+.form-control.error input {
+    border-color: #e74c3c;
+}
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+}
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.input-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    padding-left: 30%;
+    padding-right: 31.5%;
+}
+input {
+    width: 40%;
+    font-size: 100%;
+    padding: 1%;
+}
+.input-column .row-input{
+    width: 110%;
+}
+.submit button{
+    width: 40%;
+    padding: 1%;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    border-width: 3px;
+    border: solid rgb(0, 0, 0);
+}
+#phone{
+    padding: 10px;
+}
+#langs{
+    padding: 12px;
+}
+
+/*Motto Section*/
+section.motto .row{
+    background-color: #292929;
+}
+#motto-txt{
+    color: #FF7630;
+    font-size: 45px;
+    text-align: right;
+    flex: 4 0 auto;
+    padding-right: 0px;
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+#motto-img{
+    padding-left: 0px;
+    text-align: center;
+}
+
+/*contact us*/
+.contact .row .column{
+    color: #292929;
+    text-align: left;
+}
+.usa{
+    font-size: 40%;
+    color: #FF7630;
+    padding-bottom: 1%;
+}
+.usa-address{
+    font-size: 60%;
+    font-weight: 100;
+}
+.usa-phone{
+    font-size: 65%;
+}
+.can p{
+    text-align: right;
+}
+.column #copy{
+    color: #292929;
+    font-size: 30%;
+    padding-top: 10% ;
+}
+
+
+/* FOR RESPONSIVENESS */
+@media (max-width: 1200px) {
+    
+    /*FORM*/
+    .form .text h1{
+        font-size: 2vh;
+        margin-bottom: 3%;
+    }
+    .form .text h2{
+        font-size: 4vh;
+        margin-bottom: 3%;
+    }
+    .form img{
+        width: 50%;
+    }
+
+    .form{
+        padding: 3%;
+        gap: 1%;
+        align-items: left;
+        text-align: left;
+    }
+    #label1{
+        font-size: 2vh;
+        font-weight: bold;
+        text-align: left;
+    }
+    #label2{
+        font-size: 2vh;
+        font-weight: bold;
+        text-align: left;
+    }
+    #label3{
+        font-size: 2vh;
+        font-weight: bold;
+        text-align: left;
+    }
+    #lab-lang{
+        font-size: 2vh;
+        font-weight: bold;
+        width: 100%;
+        height: auto;
+    }
+    .input-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0%;
+    }
+    .input{
+        width: 100%;
+        height: auto;
+        gap: 3%;
+        padding: 2%;
+    }
+    .input-column .input{
+        width: 100%;
+        height: auto;
+        gap: 3%;
+        padding: 2%;
+    }
+    .form button{
+        width: 100%;
+        padding: 2%;
+        margin-top: 5%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 940px) {
+
+    /*navbar*/
+    .navbar{
+        position: fixed;
+        top: 0%;
+        height: 120px;
+        background-size: 2%;
+        z-index: 10;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        height: 15%;
+        top: 0%;
+        flex-wrap: nowrap;
+    }
+    .cie-logo{
+        position: fixed;
+        display: block;
+        width: 50%;
+        max-width: 70%;
+        top: 6%;
+        z-index: 10;
+    }
+
+    /*OUR MISSION*/
+    #motto-1{
+        font-size: 180%;
+        margin-top: 80%;
+    }
+    #motto-2{
+        font-size: 300%;
+        margin-bottom: 5%;
+    }
+    .miss-content{
+        margin-bottom: 12.5%;
+    }
+    .miss-content img{
+        position: absolute;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .our-mission{
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }    
+    
+    /*WE DO*/
+    .we-do .responsive{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .we-do .container{
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+
+    .sub-title{
+        font-size: 2vh;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title{
+        font-size: 3vh;
+        margin-bottom: 2rem;
+    }
+
+    .texts .separator{
+        width: 50%;
+        padding-top: 5 em;
+    }
+
+    .we-do .last{
+        margin-bottom: 2rem;
+    }
+    .we-do p{
+        font-size: 100%;
+    }
+
+    /*SECURITY*/
+    .security .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sec-image img{
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        padding-top: 8%;
+    }
+    .sec-text{
+        padding-top: 0%;
+    }
+    #security-subtitle{
+        padding-top: 0%;
+        font-size: 2.5vh;
+    }
+    #security-title{
+        padding-top: 1%;
+        font-size: 3.5vh;
+    }
+    .security p{
+        font-size: 2vh;
+    }
+
+
+    /*Products*/
+    .products h1{
+        font-size: 2vh;
+        padding: 2%;
+    }
+    .products h2{
+        font-size: 3.5vh;
+        padding: 2%;
+    }
+    .products img{
+        width: 50%;
+    }
+    .products .products-images{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .img-text-box{
+        width: 70%;
+    }
+    .dl{
+        position: fixed;
+        width: 60%;
+        font-size: 2vh;
+        height: fit-content;
+        margin: 0%;
+        z-index: 10;
+        padding: 2%;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0,0,0,0.69);
+    }
+    .cta-border {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        padding: 10%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: rgba(0,0,0,0.69);
+    }
+
+
+    /*MOTTO*/
+    .motto .row{
+        display: flex;
+        flex-direction: column;
+    }
+    #motto-txt{
+        padding: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 8%;
+        font-size: 5vh;
+        text-align: center;
+    }
+    .motto #motto-img{
+        padding: 1%;
+        padding-bottom: 10%;
+    }
+    .motto #motto-img img{
+        width: 70%;
+        height: auto;
+        align-items: center;
+    }
+    
+
+    /*CONTACT US*/
+    .contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact p{
+        text-align: center;
+        font-weight: 400;
+    }
+    .contact .usa-phone{
+        font-size: 3vh;
+        font-weight: bold;
+    }
+    .contact .usa{
+        font-size: 2vh;
+        font-weight: bold;
+    }
+    .usa-address{
+        font-size: 3vh;
+    }
+
+
+}
