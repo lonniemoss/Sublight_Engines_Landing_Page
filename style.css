@@ -67,10 +67,10 @@ nav ul li a:hover{
     transition: all 0.3s ease-in-out;
     background-color: #fff;
 }
-@media(max-width:940px){
+@media(max-width:960px){
     .hamburger{
-        position: fixed;
         display: block;
+        position: fixed;    
         right: 10%;
         top: 7%;
     }
@@ -93,18 +93,18 @@ nav ul li a:hover{
         background: rgba(0,0,0,0.69);
         width: 100%;
         text-align: center;
-        align-items: right;
         transition: 0.3s;
-        z-index: 10;
+        /* align-items: right;    
+        z-index: 10; */
     }
     .nav-item{
         margin: 16px 0;
     }
     .nav-options.active{
         left: 0;
-        top: 16%;
+        /* top: 16%;
         z-index: 10;
-        visibility: visible;
+        visibility: visible; */
     }
     .nav-options a{
         align-items: center;
