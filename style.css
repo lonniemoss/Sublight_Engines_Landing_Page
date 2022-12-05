@@ -94,17 +94,17 @@ nav ul li a:hover{
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        /* align-items: right;    
-        z-index: 10; */
+        align-items: right;    
+        z-index: 10;
     }
     .nav-item{
         margin: 16px 0;
     }
     .nav-options.active{
         left: 0;
-        /* top: 16%;
+        top: 16%;
         z-index: 10;
-        visibility: visible; */
+        visibility: visible;
     }
     .nav-options a{
         align-items: center;
