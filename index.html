@@ -8,6 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("kEzNBmjhtpIGbF7eM");
+        })();
+    </script>
+    <script type="text/javascript">
+        function sendMail() {
+            document.getElementById("form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_mom6qzx', 'template_t90nh5l', "#form", "kEzNBmjhtpIGbF7eM")
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     
@@ -81,11 +100,14 @@
                 <div class="sec-text">
                     <h2 id="security-subtitle">2022 SECUREBOARDS SERIES</h2>
                     <h3 id="security-title">THE PERFECTION IN SECURITY</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Vulputate diam placerat a et pulvinar sapien orci mauris platea. Consectetur non adipiscing duis quis leo integer adipiscing elit. 
-                        Felis, cursus aenean at egestas mauris. Senectus pharetra volutpat ligula ac et. 
-                        Morbi amet dignissim ipsum, in accumsan. Rhoncus in erat consectetur mi consectetur. At faucibus pellentesque et aliquet mauris. 
-                        Senectus facilisi at elementum lectus non egestas. In elementum cum suspendisse quam. Congue sagittis fermentum mauris fermentum ut lectus parturient faucibus id.</p>
+                    <p class="description">Did you know that elevators are one of the most secure forms of transportation? That's because they're designed to be as safe as possible, with multiple fail-safes in place to prevent accidents.</p>
+
+                        <p>Elevators are equipped with a variety of safety features, including:</p>                        
+                        <p>- Brakes that stop the elevator if it starts to fall</p>
+                        <p>- Doors that open automatically in an emergency</p>
+                        <p>- Emergency stop buttons inside the elevator</p>
+                        <p>- Alarms that sound if the elevator doors are opened without authorization</p>
+                        <p>- Cameras that monitor activity .</p>
                 </div>
                 <div class="sec-image">
                     <img src="images/bkg_2 1.png" alt=""></img>
@@ -186,7 +208,7 @@
                     </div>
                     <div class="form-control">
                         <div class="submit">
-                            <button name="" id="sub">Submit</button>
+                            <button name="" id="sub" onclick="sendMail()" value="send" type="submit" >Submit</button>
                         </div>       
                     </div>
                 </form>

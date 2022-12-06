@@ -49,6 +49,7 @@ nav ul li a{
 nav ul li a:hover{
     background-color: #555;
 }
+
 .nav-options ul{
     display: flex;
     margin: 0;
@@ -214,6 +215,7 @@ nav ul li a:hover{
     font-size: 120%;
     text-align: left;
     color: #292929;
+    padding-bottom: 35px;   
 }
 .sec-image{
     padding: 3%;
@@ -309,7 +311,7 @@ nav ul li a:hover{
 /* INPUT side*/
 form{
     text-align: center;
-    padding-inline: 17%;
+    padding-inline: 7%;
 }
 .label{
     font-size: 1rem;
