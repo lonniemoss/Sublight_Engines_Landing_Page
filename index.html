@@ -22,16 +22,11 @@
                 emailjs.sendForm('service_mom6qzx', 'template_t90nh5l', "#form", "kEzNBmjhtpIGbF7eM")
                     .then(function() {
                         let x = document.forms["myForm"]["name"].value;
-                        let y = document.forms["myForm"]["phone"].value;
                         let g = document.forms["myForm"]["languages"].value;
                         if (x == "") {
                             alert("Name must be filled out");
                             return false;
                         }
-                        else if (y == "") {
-                            alert("Phone number must be filled out");
-                            return false;
-                        } 
                         else {
                         console.log('SUCCESS!');
                         alert("message sent, successfully");
@@ -206,7 +201,7 @@
                     <div class="input-column">
                         <div class="form-control number">
                             <label class="label" for="phone" id="label3">PHONE NUMBER</label><br>
-                            <input class="input row-input" placeholder="0 (000) 000-0000" type="tel" name="phone" id="phone" minlength="10" required><br>
+                            <input class="input row-input" placeholder="0 (000) 000-0000" type="tel" name="user_phone" id="user_phone" min="10" required><br>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
